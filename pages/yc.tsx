@@ -1,21 +1,30 @@
 import React from 'react';
-import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
-import Link from '../src/Link';
 import Root from "../src/components/Root";
+import Toolbar from "@material-ui/core/Toolbar";
+import {Button, ButtonGroup, Paper} from "@material-ui/core";
+import Link from "next/link";
 
 export default function YC() {
   return (
   <>
     <Root>
-      <Box my={4}>
-        <Typography variant="h4" component="h1" gutterBottom>
-          People at YC
-        </Typography>
-        <Link href="/index" color="secondary">
-          Go to the index page
-        </Link>
-      </Box>
+      <div style={{margin: "-24px"}}>
+        <Toolbar style={{background: "#222"}}>
+          <ButtonGroup className="ButtonGroupNav" color="secondary">
+            <Button>
+              <Link href="/companies" as="/companies">Company</Link>
+            </Button>
+            <Button>
+              <Link href="/founders" as="/founders">Founders</Link>
+            </Button>
+            <Button variant="contained" color="secondary">
+              <Link href="/yc" as="/yc">YC</Link>
+            </Button>
+          </ButtonGroup>
+        </Toolbar>
+        <Paper style={{borderRadius: 0, padding: 16}}>
+        </Paper>
+      </div>
     </Root>
   </>
   );

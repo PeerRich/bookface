@@ -12,3 +12,16 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .selected svg {
     color: #F26521 !important
 }
+
+
+.ButtonGroupNav button{
+    padding: 0
+}
+
+.ButtonGroupNav button a{
+    color: inherit;
+    padding: 6px 16px;
+    text-decoration: none;
+    display: inline-block !important;
+    width: 100%;
+}
