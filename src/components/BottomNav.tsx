@@ -32,7 +32,7 @@ export default function BottomNav() {
       initVal = 2;
       break;
     default:
-      initVal = 0;
+      initVal = 2;
   }
 
   const [value, setValue] = React.useState(initVal);

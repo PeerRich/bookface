@@ -452,7 +452,7 @@ export default function Root(props: any) {
       <Divider/>
 
       {/* Menu Switch for Recruiting */
-        recruiting ? RecruitingMenu() :
+        recruiting ? <RecruitingMenu/> :
         <>
           <CommunityMenu/>
           <Divider/>
