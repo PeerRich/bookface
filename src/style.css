@@ -12,3 +12,22 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .selected svg {
     color: #F26521 !important
 }
+
+
+.bottomAppBarWrapper{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+}
+
+@media all and (display-mode: standalone) {
+    .hidden-standalone {
+        display: none
+    }
+
+    .bottomAppBarWrapper div{
+        margin-bottom: 20px;
+    }
+}

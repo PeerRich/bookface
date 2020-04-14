@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 import PersonIcon from '@material-ui/icons/Person';
@@ -10,8 +10,6 @@ import Router, {useRouter} from "next/router";
 const useStyles = makeStyles({
   root: {
     width: "100%",
-    position: "fixed",
-    bottom: 0,
   },
 });
 
@@ -39,18 +37,20 @@ export default function BottomNav() {
 
 
   return (
-  <BottomNavigation
-  value={value}
-  onChange={(event, newValue) => {
-    setValue(newValue);
-    console.log(event)
-  }}
-  showLabels
-  className={classes.root}
-  >
-    <BottomNavigationAction onClick={() => Router.push("/channels")} label="Forum" icon={<ForumIcon />} />
-    <BottomNavigationAction onClick={() => Router.push("/messages")} label="Messages" icon={<InboxIcon />} />
-    <BottomNavigationAction onClick={() => Router.push("/account")} label="Account" icon={<PersonIcon />} />
-  </BottomNavigation>
+  <div className="bottomAppBarWrapper">
+    <BottomNavigation
+    value={value}
+    onChange={(event, newValue) => {
+      setValue(newValue);
+      console.log(event)
+    }}
+    showLabels
+    className={classes.root}
+    >
+      <BottomNavigationAction onClick={() => Router.push("/channels")} label="Forum" icon={<ForumIcon/>}/>
+      <BottomNavigationAction onClick={() => Router.push("/messages")} label="Messages" icon={<InboxIcon/>}/>
+      <BottomNavigationAction onClick={() => Router.push("/account")} label="Account" icon={<PersonIcon/>}/>
+    </BottomNavigation>
+  </div>
   );
 }

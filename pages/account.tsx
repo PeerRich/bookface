@@ -29,7 +29,7 @@ export default function Knowledge() {
       <div style={{
         flexShrink: 0,
         whiteSpace: 'nowrap',
-        margin: "-20px",
+        margin: "-32px -24px",
       }}>
         {recruiting ? <RecruitingMenu/> :
         <div>

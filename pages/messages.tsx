@@ -15,7 +15,7 @@ export default function Messages() {
     <div style={{
       flexShrink: 0,
       whiteSpace: 'nowrap',
-      margin: "-20px",
+      margin: "-32px -24px",
     }}>
       <List>
         <ListItem alignItems="flex-start" button onClick={() => console.log()}>
