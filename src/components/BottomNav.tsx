@@ -12,9 +12,11 @@ const useStyles = makeStyles({
     width: "100%",
     position: "fixed",
     bottom: 0,
-    height: 80,
-    paddingBottom: 10,
+    height: 70,
   },
+  tab: {
+    paddingBottom: 20
+  }
 });
 
 export default function BottomNav() {
@@ -24,7 +26,7 @@ export default function BottomNav() {
   let initVal = 0;
 
   switch (router.pathname) {
-    case '/forum':
+    case '/channels':
       initVal = 0;
       break;
     case '/messages':
@@ -50,9 +52,9 @@ export default function BottomNav() {
   showLabels
   className={classes.root}
   >
-    <BottomNavigationAction onClick={() => Router.push("/channels")} label="Forum" icon={<ForumIcon/>}/>
-    <BottomNavigationAction onClick={() => Router.push("/messages")} label="Messages" icon={<InboxIcon/>}/>
-    <BottomNavigationAction onClick={() => Router.push("/account")} label="Account" icon={<PersonIcon/>}/>
+    <BottomNavigationAction className={classes.tab} onClick={() => Router.push("/channels")} label="Forum" icon={<ForumIcon/>}/>
+    <BottomNavigationAction className={classes.tab} onClick={() => Router.push("/messages")} label="Messages" icon={<InboxIcon/>}/>
+    <BottomNavigationAction className={classes.tab} onClick={() => Router.push("/account")} label="Account" icon={<PersonIcon/>}/>
   </BottomNavigation>
   );
 }
