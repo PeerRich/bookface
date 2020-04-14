@@ -10,6 +10,10 @@ import Router, {useRouter} from "next/router";
 const useStyles = makeStyles({
   root: {
     width: "100%",
+    position: "fixed",
+    bottom: 0,
+    height: 80,
+    paddingBottom: 10,
   },
 });
 
@@ -37,20 +41,18 @@ export default function BottomNav() {
 
 
   return (
-  <div className="bottomAppBarWrapper">
-    <BottomNavigation
-    value={value}
-    onChange={(event, newValue) => {
-      setValue(newValue);
-      console.log(event)
-    }}
-    showLabels
-    className={classes.root}
-    >
-      <BottomNavigationAction onClick={() => Router.push("/channels")} label="Forum" icon={<ForumIcon/>}/>
-      <BottomNavigationAction onClick={() => Router.push("/messages")} label="Messages" icon={<InboxIcon/>}/>
-      <BottomNavigationAction onClick={() => Router.push("/account")} label="Account" icon={<PersonIcon/>}/>
-    </BottomNavigation>
-  </div>
+  <BottomNavigation
+  value={value}
+  onChange={(event, newValue) => {
+    setValue(newValue);
+    console.log(event)
+  }}
+  showLabels
+  className={classes.root}
+  >
+    <BottomNavigationAction onClick={() => Router.push("/channels")} label="Forum" icon={<ForumIcon/>}/>
+    <BottomNavigationAction onClick={() => Router.push("/messages")} label="Messages" icon={<InboxIcon/>}/>
+    <BottomNavigationAction onClick={() => Router.push("/account")} label="Account" icon={<PersonIcon/>}/>
+  </BottomNavigation>
   );
 }
