@@ -2,19 +2,41 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
-import RestoreIcon from '@material-ui/icons/Restore';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import LocationOnIcon from '@material-ui/icons/LocationOn';
+import PersonIcon from '@material-ui/icons/Person';
+import InboxIcon from '@material-ui/icons/Email';
+import ForumIcon from "@material-ui/icons/Forum";
+import Router, {useRouter} from "next/router";
 
 const useStyles = makeStyles({
   root: {
-    width: 500,
+    width: "100%",
+    position: "fixed",
+    bottom: 0,
   },
 });
 
 export default function BottomNav() {
   const classes = useStyles();
-  const [value, setValue] = React.useState(0);
+  const router = useRouter();
+
+  let initVal = 0;
+
+  switch (router.pathname) {
+    case '/forum':
+      initVal = 0;
+      break;
+    case '/messages':
+      initVal = 1;
+      break;
+    case '/account':
+      initVal = 2;
+      break;
+    default:
+      initVal = 0;
+  }
+
+  const [value, setValue] = React.useState(initVal);
+
 
   return (
   <BottomNavigation
@@ -26,9 +48,9 @@ export default function BottomNav() {
   showLabels
   className={classes.root}
   >
-    <BottomNavigationAction label="Recents" icon={<RestoreIcon />} />
-    <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
-    <BottomNavigationAction label="Nearby" icon={<LocationOnIcon />} />
+    <BottomNavigationAction onClick={() => Router.push("/channels")} label="Forum" icon={<ForumIcon />} />
+    <BottomNavigationAction onClick={() => Router.push("/messages")} label="Messages" icon={<InboxIcon />} />
+    <BottomNavigationAction onClick={() => Router.push("/account")} label="Account" icon={<PersonIcon />} />
   </BottomNavigation>
   );
 }

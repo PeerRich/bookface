@@ -233,7 +233,7 @@ export default function Root(props: any) {
     setRecruting((prev) => !prev);
   };
 
-  const mobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const mobile = useMediaQuery(theme.breakpoints.down('xs'));
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -498,158 +498,159 @@ export default function Root(props: any) {
         }),
       }}
     >
-      <Divider style={{marginBottom: 60}}/>
-
-      <List>
-        <ListItem alignItems="flex-start" button onClick={() => handleMessengerOpen()}>
-          <ListItemAvatar>
-            <BadgeAvatars status="online">
-              <Avatar alt="Remy Sharp"
-                      src="https://bookface-images.s3.amazonaws.com/avatars/1b324f828a6542f5a943c4bbb3c945adb3e45969.jpg?1546203626"/>
-            </BadgeAvatars>
-          </ListItemAvatar>
-          <ListItemText
-            primary="Brunch this weekend?"
-            secondary={
-              <React.Fragment>
-                <Typography
-                component="span"
-                variant="body2"
-                className={classes.chatParticipant}
-                color="textPrimary"
-                >
-                  Malte Delfs
-                </Typography>
-                — Mage (W19)
-              </React.Fragment>
-            }
-          />
-        </ListItem>
-        <Divider variant="inset" component="li"/>
-        <ListItem alignItems="flex-start" button onClick={() => handleMessengerOpen()}>
-          <ListItemAvatar>
-            <BadgeAvatars status="offline">
-              <Avatar alt="Remy Sharp"
-                      src="https://bookface-images.s3.amazonaws.com/avatars/d8621183e71fe34a93a47bec7e5b45c5cafd0253.jpg?1515222354"/>
-            </BadgeAvatars>
-          </ListItemAvatar>
-          <ListItemText
-            primary="Wow, love the redesign! ..."
-            secondary={
-              <React.Fragment>
-                <Typography
-                component="span"
-                variant="body2"
-                className={classes.chatParticipant}
-                color="textPrimary"
-                >
-                  Paul Graham </Typography>
-                — Y Combinator
-              </React.Fragment>
-            }
-          />
-        </ListItem>
-        <Divider variant="inset" component="li"/>
-        <ListItem alignItems="flex-start" button onClick={() => handleMessengerOpen()}>
-          <ListItemAvatar>
-            <BadgeAvatars status="busy">
-              <Avatar alt="Remy Sharp"
-                      src="/confused-meme.png"/>
-            </BadgeAvatars>
-          </ListItemAvatar>
-          <ListItemText
-            primary="How did I get here?"
-            secondary={
-              <React.Fragment>
-                <Typography
-                component="span"
-                variant="body2"
-                className={classes.chatParticipant}
-                color="textPrimary"
-                >
-                  Nick Young
-                </Typography>
-                — NBA
-              </React.Fragment>
-            }
-          />
-        </ListItem>
-        <Divider variant="inset" component="li"/>
-        <ListItem alignItems="flex-start" button onClick={() => handleMessengerOpen()}>
-          <ListItemAvatar>
-            <BadgeAvatars status="busy">
-              <Avatar alt="Remy Sharp"
-                      src="/cat.jpg"/>
-            </BadgeAvatars>
-          </ListItemAvatar>
-          <ListItemText
-            primary="Can I haz some music?"
-            secondary={
-              <React.Fragment>
-                <Typography
-                component="span"
-                variant="body2"
-                className={classes.chatParticipant}
-                color="textPrimary"
-                >
-                  Keyboard Cat
-                </Typography>
-                — Meme Corp
-              </React.Fragment>
-            }
-          />
-        </ListItem>
-      </List>
-
-      <Divider/>
-
-      <div className={classes.grow}/>
-
-      <Divider/>
-
-      <div className={classes.toolbarChat}>
-        {openChat ?
-        <IconButton onClick={handleChatClose}>
-          <ChevronRightIcon/>
-        </IconButton> :
-        <IconButton onClick={handleChatOpen}>
-          <ChevronLeftIcon/>
-        </IconButton>}
-      </div>
-
-      {openMessenger && <Paper style={{bottom: 0, right: openChat ? 310 : 90}} className={clsx(classes.messenger, {
-        [classes.messengerOpen]: openChat,
-        [classes.messengerClose]: !openChat,
-      })}>
-        <List dense={true} style={{padding: "0px 0 0px 8px", boxShadow: "0 2px 1px rgba(0, 0, 0, .1)"}}>
-          <ListItem disableGutters>
-            <ListItemAvatar style={{minWidth: 42}}>
-
+      <>
+        <Divider style={{marginBottom: 60}}/>
+        <List>
+          <ListItem alignItems="flex-start" button onClick={() => handleMessengerOpen()}>
+            <ListItemAvatar>
               <BadgeAvatars status="online">
-                <Avatar className={classes.small}
-                        src="https://bookface-images.s3.amazonaws.com/avatars/1b324f828a6542f5a943c4bbb3c945adb3e45969.jpg?1546203626"
-                        alt="Malte Delfs"/>
+                <Avatar alt="Remy Sharp"
+                        src="https://bookface-images.s3.amazonaws.com/avatars/1b324f828a6542f5a943c4bbb3c945adb3e45969.jpg?1546203626"/>
               </BadgeAvatars>
-
             </ListItemAvatar>
             <ListItemText
-              primary="Malte Delfs"
-              secondary="Mage (W19)"
+              primary="Brunch this weekend?"
+              secondary={
+                <React.Fragment>
+                  <Typography
+                  component="span"
+                  variant="body2"
+                  className={classes.chatParticipant}
+                  color="textPrimary"
+                  >
+                    Malte Delfs
+                  </Typography>
+                  — Mage (W19)
+                </React.Fragment>
+              }
             />
-            <ListItemSecondaryAction>
-              <IconButton href="mailto:person@example.com" size="small" edge="end" aria-label="email">
-                <MailIcon/>
-              </IconButton>
-
-              <VideoDialog button={<VideoIcon/>}/>
-
-              <IconButton onClick={() => handleMessengerClose()} size="small" edge="end" aria-label="close">
-                <ClearIcon/>
-              </IconButton>
-            </ListItemSecondaryAction>
+          </ListItem>
+          <Divider variant="inset" component="li"/>
+          <ListItem alignItems="flex-start" button onClick={() => handleMessengerOpen()}>
+            <ListItemAvatar>
+              <BadgeAvatars status="offline">
+                <Avatar alt="Remy Sharp"
+                        src="https://bookface-images.s3.amazonaws.com/avatars/d8621183e71fe34a93a47bec7e5b45c5cafd0253.jpg?1515222354"/>
+              </BadgeAvatars>
+            </ListItemAvatar>
+            <ListItemText
+              primary="Wow, love the redesign! ..."
+              secondary={
+                <React.Fragment>
+                  <Typography
+                  component="span"
+                  variant="body2"
+                  className={classes.chatParticipant}
+                  color="textPrimary"
+                  >
+                    Paul Graham </Typography>
+                  — Y Combinator
+                </React.Fragment>
+              }
+            />
+          </ListItem>
+          <Divider variant="inset" component="li"/>
+          <ListItem alignItems="flex-start" button onClick={() => handleMessengerOpen()}>
+            <ListItemAvatar>
+              <BadgeAvatars status="busy">
+                <Avatar alt="Remy Sharp"
+                        src="/confused-meme.png"/>
+              </BadgeAvatars>
+            </ListItemAvatar>
+            <ListItemText
+              primary="How did I get here?"
+              secondary={
+                <React.Fragment>
+                  <Typography
+                  component="span"
+                  variant="body2"
+                  className={classes.chatParticipant}
+                  color="textPrimary"
+                  >
+                    Nick Young
+                  </Typography>
+                  — NBA
+                </React.Fragment>
+              }
+            />
+          </ListItem>
+          <Divider variant="inset" component="li"/>
+          <ListItem alignItems="flex-start" button onClick={() => handleMessengerOpen()}>
+            <ListItemAvatar>
+              <BadgeAvatars status="busy">
+                <Avatar alt="Remy Sharp"
+                        src="/cat.jpg"/>
+              </BadgeAvatars>
+            </ListItemAvatar>
+            <ListItemText
+              primary="Can I haz some music?"
+              secondary={
+                <React.Fragment>
+                  <Typography
+                  component="span"
+                  variant="body2"
+                  className={classes.chatParticipant}
+                  color="textPrimary"
+                  >
+                    Keyboard Cat
+                  </Typography>
+                  — Meme Corp
+                </React.Fragment>
+              }
+            />
           </ListItem>
         </List>
-      </Paper>}
+
+        <Divider/>
+
+        <div className={classes.grow}/>
+
+        <Divider/>
+
+        <div className={classes.toolbarChat}>
+          {openChat ?
+          <IconButton onClick={handleChatClose}>
+            <ChevronRightIcon/>
+          </IconButton> :
+          <IconButton onClick={handleChatOpen}>
+            <ChevronLeftIcon/>
+          </IconButton>}
+        </div>
+
+        {openMessenger && <Paper style={{bottom: 0, right: openChat ? 310 : 90}} className={clsx(classes.messenger, {
+          [classes.messengerOpen]: openChat,
+          [classes.messengerClose]: !openChat,
+        })}>
+          <List dense={true} style={{padding: "0px 0 0px 8px", boxShadow: "0 2px 1px rgba(0, 0, 0, .1)"}}>
+            <ListItem disableGutters>
+              <ListItemAvatar style={{minWidth: 42}}>
+
+                <BadgeAvatars status="online">
+                  <Avatar className={classes.small}
+                          src="https://bookface-images.s3.amazonaws.com/avatars/1b324f828a6542f5a943c4bbb3c945adb3e45969.jpg?1546203626"
+                          alt="Malte Delfs"/>
+                </BadgeAvatars>
+
+              </ListItemAvatar>
+              <ListItemText
+                primary="Malte Delfs"
+                secondary="Mage (W19)"
+              />
+              <ListItemSecondaryAction>
+                <IconButton href="mailto:person@example.com" size="small" edge="end" aria-label="email">
+                  <MailIcon/>
+                </IconButton>
+
+                <VideoDialog button={<VideoIcon/>}/>
+
+                <IconButton onClick={() => handleMessengerClose()} size="small" edge="end" aria-label="close">
+                  <ClearIcon/>
+                </IconButton>
+              </ListItemSecondaryAction>
+            </ListItem>
+          </List>
+        </Paper>}
+      </>
 
     </Drawer>}
 
