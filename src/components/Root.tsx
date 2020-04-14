@@ -21,7 +21,7 @@ import SearchIcon from '@material-ui/icons/Search';
 import InputBase from "@material-ui/core/InputBase/InputBase";
 import Badge from '@material-ui/core/Badge';
 import NotificationsIcon from '@material-ui/icons/Notifications';
-import VideoIcon from '@material-ui/icons/VideoCam';
+import VideoIcon from '@material-ui/icons/Videocam';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import MoreIcon from '@material-ui/icons/MoreVert';
