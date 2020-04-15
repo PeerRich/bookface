@@ -10,7 +10,7 @@ const people = [
     id: 1,
     name: "Ariana Grande",
     company: "Y Combinator",
-    companyLogo: "https://bookface.ycombinator.com/assets/ycombinator-logo-7481412385fe6d0f7d4a3339d90fe12309432ca41983e8d350b232301d5d8684.png",
+    companyLogo: "/yc.png",
     title: "Founder",
     email: 'example@ycombinator.com'
   },
@@ -18,7 +18,7 @@ const people = [
     id: 2,
     name: "Peter Jackson",
     company: "Y Combinator",
-    companyLogo: "https://bookface.ycombinator.com/assets/ycombinator-logo-7481412385fe6d0f7d4a3339d90fe12309432ca41983e8d350b232301d5d8684.png",
+    companyLogo: "/yc.png",
     title: "Engineer",
     email: 'example@ycombinator.com'
   },
@@ -26,7 +26,7 @@ const people = [
     id: 3,
     name: "Luke Skywalker",
     company: "Y Combinator",
-    companyLogo: "https://bookface.ycombinator.com/assets/ycombinator-logo-7481412385fe6d0f7d4a3339d90fe12309432ca41983e8d350b232301d5d8684.png",
+    companyLogo: "/yc.png",
     title: "Trouble Maker",
     email: 'example@ycombinator.com'
   },
@@ -34,7 +34,7 @@ const people = [
     id: 4,
     name: "Darth Vader",
     company: "Y Combinator",
-    companyLogo: "https://bookface.ycombinator.com/assets/ycombinator-logo-7481412385fe6d0f7d4a3339d90fe12309432ca41983e8d350b232301d5d8684.png",
+    companyLogo: "/yc.png",
     title: "COO",
     email: 'example@ycombinator.com'
   },
@@ -42,7 +42,7 @@ const people = [
     id: 5,
     name: "Marilyn Monroe",
     company: "Y Combinator",
-    companyLogo: "https://bookface.ycombinator.com/assets/ycombinator-logo-7481412385fe6d0f7d4a3339d90fe12309432ca41983e8d350b232301d5d8684.png",
+    companyLogo: "/yc.png",
     title: "CTO",
     email: 'example@ycombinator.com'
   },
@@ -50,7 +50,7 @@ const people = [
     id: 6,
     name: "Oprah Winfrey",
     company: "Y Combinator",
-    companyLogo: "https://bookface.ycombinator.com/assets/ycombinator-logo-7481412385fe6d0f7d4a3339d90fe12309432ca41983e8d350b232301d5d8684.png",
+    companyLogo: "/yc.png",
     title: "CFO",
     email: 'example@ycombinator.com'
   },
@@ -58,7 +58,7 @@ const people = [
     id: 7,
     name: "Abraham Lincoln",
     company: "Y Combinator",
-    companyLogo: "https://bookface.ycombinator.com/assets/ycombinator-logo-7481412385fe6d0f7d4a3339d90fe12309432ca41983e8d350b232301d5d8684.png",
+    companyLogo: "/yc.png",
     title: "President",
     email: 'example@ycombinator.com'
   },
@@ -66,7 +66,7 @@ const people = [
     id: 8,
     name: "Marie Curie",
     company: "Y Combinator",
-    companyLogo: "https://bookface.ycombinator.com/assets/ycombinator-logo-7481412385fe6d0f7d4a3339d90fe12309432ca41983e8d350b232301d5d8684.png",
+    companyLogo: "/yc.png",
     title: "Software Engineer",
     email: 'example@ycombinator.com'
   },
@@ -74,7 +74,7 @@ const people = [
     id: 9,
     name: "Martin Luther King",
     company: "Y Combinator",
-    companyLogo: "https://bookface.ycombinator.com/assets/ycombinator-logo-7481412385fe6d0f7d4a3339d90fe12309432ca41983e8d350b232301d5d8684.png",
+    companyLogo: "/yc.png",
     title: "Co-Founder",
     email: 'example@ycombinator.com'
   },
@@ -82,7 +82,7 @@ const people = [
     id: 10,
     name: "Jack Sparrow",
     company: "Y Combinator",
-    companyLogo: "https://bookface.ycombinator.com/assets/ycombinator-logo-7481412385fe6d0f7d4a3339d90fe12309432ca41983e8d350b232301d5d8684.png",
+    companyLogo: "/yc.png",
     title: "Produt Manager",
     email: 'example@ycombinator.com'
   },
@@ -90,7 +90,7 @@ const people = [
     id: 11,
     name: "Mother Teresa",
     company: "Y Combinator",
-    companyLogo: "https://bookface.ycombinator.com/assets/ycombinator-logo-7481412385fe6d0f7d4a3339d90fe12309432ca41983e8d350b232301d5d8684.png",
+    companyLogo: "/yc.png",
     title: "Software Engineer",
     email: 'example@ycombinator.com'
   },
@@ -98,7 +98,7 @@ const people = [
     id: 12,
     name: "J.K.Rowling ",
     company: "Y Combinator",
-    companyLogo: "https://bookface.ycombinator.com/assets/ycombinator-logo-7481412385fe6d0f7d4a3339d90fe12309432ca41983e8d350b232301d5d8684.png",
+    companyLogo: "/yc.png",
     title: "Creative Director",
     email: 'example@ycombinator.com'
   },

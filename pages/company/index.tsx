@@ -22,7 +22,7 @@ export default function Company() {
           </IconButton>
           <Link href="/channels" as="/channels">
             <img style={{marginRight: -3, zIndex: 1}}
-                 src="https://bookface.ycombinator.com/assets/ycombinator-logo-7481412385fe6d0f7d4a3339d90fe12309432ca41983e8d350b232301d5d8684.png"
+                 src="/yc.png"
                  height={35}/>
           </Link>
             <Typography variant="body2" style={{lineHeight: "64px", padding: "0px 8px", fontWeight: "bold"}}>

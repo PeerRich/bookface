@@ -14,7 +14,7 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText/ListItemText";
 import ListItemSecondaryAction from "@material-ui/core/ListItemSecondaryAction/ListItemSecondaryAction";
-import {Switch} from "@material-ui/core";
+import Switch from "@material-ui/core/Switch";
 import PersonAddIcon from '@material-ui/icons/PersonAdd';
 
 export default function Knowledge() {
