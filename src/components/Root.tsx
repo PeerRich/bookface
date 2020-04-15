@@ -36,6 +36,7 @@ import BadgeAvatars from "./BadgeAvatars";
 import useMediaQuery from "@material-ui/core/useMediaQuery/useMediaQuery";
 import BottomNav from "./BottomNav";
 import {CommunityMenu, RecruitingMenu, CompanyMenu, ContactMenu, MiscMenu, ResourcesMenu} from "./Menus";
+import Messenger from "./Messenger";
 
 const drawerWidth = 240;
 
@@ -167,8 +168,8 @@ createStyles({
     position: "fixed",
     zIndex: 1199,
     bottom: 0,
-    height: 393,
-    width: 288,
+    height: 400,
+    width: 301,
     borderBottomRightRadius: 0,
     borderBottomLeftRadius: 0,
   },
@@ -459,8 +460,8 @@ export default function Root(props: any) {
           <ResourcesMenu/>
           <Divider/>
           <ContactMenu/>
-          <MiscMenu/>
           <CompanyMenu/>
+          <MiscMenu/>
         </>
       }
 
@@ -509,7 +510,7 @@ export default function Root(props: any) {
               </BadgeAvatars>
             </ListItemAvatar>
             <ListItemText
-              primary="Brunch this weekend?"
+              primary="that's pretty slick"
               secondary={
                 <React.Fragment>
                   <Typography
@@ -617,38 +618,21 @@ export default function Root(props: any) {
           </IconButton>}
         </div>
 
-        {openMessenger && <Paper style={{bottom: 0, right: openChat ? 310 : 90}} className={clsx(classes.messenger, {
+        {openMessenger && <Paper style={{zIndex: 2, bottom: 0, right: openChat ? 310 : 88}} className={clsx(classes.messenger, {
           [classes.messengerOpen]: openChat,
           [classes.messengerClose]: !openChat,
         })}>
-          <List dense={true} style={{padding: "0px 0 0px 8px", boxShadow: "0 2px 1px rgba(0, 0, 0, .1)"}}>
-            <ListItem disableGutters>
-              <ListItemAvatar style={{minWidth: 42}}>
-
-                <BadgeAvatars status="online">
-                  <Avatar className={classes.small}
-                          src="https://bookface-images.s3.amazonaws.com/avatars/1b324f828a6542f5a943c4bbb3c945adb3e45969.jpg?1546203626"
-                          alt="Malte Delfs"/>
-                </BadgeAvatars>
-
-              </ListItemAvatar>
-              <ListItemText
-                primary="Malte Delfs"
-                secondary="Mage (W19)"
-              />
+          <Messenger buttons={
               <ListItemSecondaryAction>
                 <IconButton href="mailto:person@example.com" size="small" edge="end" aria-label="email">
                   <MailIcon/>
                 </IconButton>
-
                 <VideoDialog button={<VideoIcon/>}/>
-
                 <IconButton onClick={() => handleMessengerClose()} size="small" edge="end" aria-label="close">
                   <ClearIcon/>
                 </IconButton>
               </ListItemSecondaryAction>
-            </ListItem>
-          </List>
+          }/>
         </Paper>}
       </>
 

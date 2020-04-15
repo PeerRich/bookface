@@ -34,11 +34,11 @@ p a {
     opacity: 0.8;
     transition: opacity .2s ease-in-out;
     padding: 0 10px 13px;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
     box-shadow: none !important;
     display: flex;
-    justify-content: center
+    justify-content: center;
 }
 
 .paginationPaperHover:hover{
@@ -46,11 +46,19 @@ p a {
     transition: opacity .4s ease-in-out;
 }
 
+.messengerFilledInput {
+    background: rgba(0, 0, 0, 0.04) !important;
+    border-right: 0 !important;
+}
+.messengerFilledInput input{
+    padding: 15px 12px 10px;
+}
+
 @media only screen and (max-width: 600px) {
     .paginationPaperHover{
         opacity: 1;
         width: 100%;
-        box-shadow: 0;
+        box-shadow: initial;
         bottom: 70px;
         position: relative;
     }

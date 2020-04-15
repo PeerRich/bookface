@@ -26,7 +26,7 @@ export default function Messages() {
             </BadgeAvatars>
           </ListItemAvatar>
           <ListItemText
-          primary="Brunch this weekend?"
+          primary="that's pretty slick"
           secondary={
             <React.Fragment>
               <Typography

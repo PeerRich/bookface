@@ -67,7 +67,7 @@ const people = [
     name: "Marie Curie",
     company: "Y Combinator",
     companyLogo: "https://bookface.ycombinator.com/assets/ycombinator-logo-7481412385fe6d0f7d4a3339d90fe12309432ca41983e8d350b232301d5d8684.png",
-    title: "Head of Engineering",
+    title: "Software Engineer",
     email: 'example@ycombinator.com'
   },
   {
@@ -102,22 +102,6 @@ const people = [
     title: "Creative Director",
     email: 'example@ycombinator.com'
   },
-  {
-    id: 13,
-    name: "Madonna",
-    company: "Y Combinator",
-    companyLogo: "https://bookface.ycombinator.com/assets/ycombinator-logo-7481412385fe6d0f7d4a3339d90fe12309432ca41983e8d350b232301d5d8684.png",
-    title: "Head of HR",
-    email: 'example@ycombinator.com'
-  },
-  {
-    id: 14,
-    name: "Mariah Carey",
-    company: "Y Combinator",
-    companyLogo: "https://bookface.ycombinator.com/assets/ycombinator-logo-7481412385fe6d0f7d4a3339d90fe12309432ca41983e8d350b232301d5d8684.png",
-    title: "Legal",
-    email: 'example@ycombinator.com'
-  },
 ];
 
 export default function YC() {
@@ -144,8 +128,7 @@ export default function YC() {
                                                                                                    as="/knowledge">User
             Manual</Link>). Everyone at YC is available to answer any question at any time - just reach out!
             <ul>
-              <li>Founders in the current batch should direct most questions to their group partners and/or
-                <a href="">*******@ycombinator.com</a>
+              <li>Founders in the current batch should direct most questions to their group partners and/or <a href="">*******@ycombinator.com</a>
               </li>
               <li>YC’s legal team can be reached at <a href="">*******@ycombinator.com</a></li>
               <li>YC’s finance team can be reached at <a href="">*******@ycombinator.com</a></li>

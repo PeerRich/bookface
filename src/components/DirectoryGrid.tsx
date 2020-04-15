@@ -9,7 +9,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import CardActions from '@material-ui/core/CardActions';
 import CallIcon from '@material-ui/icons/Call';
 import InboxIcon from '@material-ui/icons/Email';
-import {Tooltip} from "@material-ui/core";
+import {CardContent, Tooltip, Typography} from "@material-ui/core";
 import PaginationButtons from "./PaginationButtons";
 
 const useStyles = makeStyles(() =>
@@ -22,7 +22,7 @@ createStyles({
   },
   media: {
     height: 0,
-    paddingTop: '70%',
+    paddingTop: '100%',
   },
 }),
 );
@@ -36,15 +36,25 @@ export default function DirectoryGrid(props: any) {
     <Card className={classes.root}>
       <CardHeader
       avatar={
-        <Avatar aria-label="company" src={data.companyLogo}/>
+        props.variant !== "company" && <Avatar aria-label="company" src={data.companyLogo}/>
       }
-      title={data.name}
-      subheader={data.title + " at " + data.company}
+      title={props.variant !== "company" ? data.name : data.company + " " + data.batch}
+      subheader={props.variant !== "company" ? data.title + " at " + data.company : <>{data.group} <small>{data.groupPartners}</small></>}
       />
-      <CardMedia
-      className={classes.media}
-      image={"https://source.unsplash.com/featured/?" + data.name}
-      />
+      {props.variant === "company" ? <CardMedia
+        className={classes.media}
+        image="https://bookface-images.s3.amazonaws.com/logos/95fd9e9103ae10678ea3667c8b798d2060104d7f.png?1573062028"
+      /> : <CardMedia
+        className={classes.media}
+        image={"https://source.unsplash.com/featured/?person, human," + data.name}
+      />}
+
+      {props.variant === "company" && <CardContent>
+        <Typography variant="body2" color="textSecondary" component="p">
+          {data.description}
+        </Typography>
+      </CardContent>}
+
       <CardActions disableSpacing>
         <Tooltip title={data.email} aria-label="person@example.com">
           <IconButton aria-label="email">
@@ -56,6 +66,7 @@ export default function DirectoryGrid(props: any) {
             <CallIcon/>
           </IconButton>
         </Tooltip>
+        {props.variant === "company" && <a href="">{data.website}</a>}
       </CardActions>
     </Card>
   </Grid>
@@ -63,10 +74,10 @@ export default function DirectoryGrid(props: any) {
 
   return (
   <div className={classes.root}>
-    <PaginationButtons/>
     <Grid container spacing={2}>
       {content}
     </Grid>
+    <PaginationButtons/>
   </div>
   );
 }

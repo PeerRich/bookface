@@ -38,8 +38,8 @@ export default function Knowledge() {
           <ResourcesMenu/>
           <Divider/>
           <ContactMenu/>
-          <MiscMenu/>
           <CompanyMenu/>
+          <MiscMenu/>
         </div>
         }
         <div style={{flexGrow: 1}}/>
