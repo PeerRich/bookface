@@ -41,6 +41,17 @@ const companies = [
     description: "The safest way to buy and sell collectibles starting with Magic: The Gathering",
     website: "magemarket.com",
   },
+  {
+    id: 1,
+    company: "Mage",
+    companyLogo: "https://magemarket.com/static/logo.svg",
+    batch: "(W19)",
+    group: "Group 3",
+    email: "founders@magemarket.com",
+    groupPartners: "Jack Sparrow, Leia Organa, The Queen",
+    description: "The safest way to buy and sell collectibles starting with Magic: The Gathering",
+    website: "magemarket.com",
+  },
 ];
 
 

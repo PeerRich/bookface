@@ -47,11 +47,11 @@ p a {
 }
 
 .messengerFilledInput {
-    background: rgba(0, 0, 0, 0.04) !important;
+    background: rgba(0, 0, 0, 0.02) !important;
     border-right: 0 !important;
 }
 .messengerFilledInput input{
-    padding: 15px 12px 10px;
+    padding: 12px;
 }
 
 @media only screen and (max-width: 600px) {

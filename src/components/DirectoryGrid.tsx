@@ -66,7 +66,7 @@ export default function DirectoryGrid(props: any) {
             <CallIcon/>
           </IconButton>
         </Tooltip>
-        {props.variant === "company" && <a href="">{data.website}</a>}
+        {props.variant === "company" && <a style={{color: "#F26521"}} href="">{data.website}</a>}
       </CardActions>
     </Card>
   </Grid>

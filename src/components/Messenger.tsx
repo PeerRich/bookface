@@ -130,6 +130,7 @@ export default function Messenger(props: any) {
           <FilledInput
           className="messengerFilledInput"
           fullWidth
+          placeholder="Write your message ..."
           endAdornment={
             <InputAdornment position="end">
               <IconButton style={{marginRight: -10}}>

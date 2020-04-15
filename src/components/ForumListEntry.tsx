@@ -36,9 +36,7 @@ const ForumListEntry = () => {
   "https://jsonplaceholder.typicode.com/posts"
   );
 
-  return (
-  <>
-
+  return (<>
     {loading ? <Loading /> : (
     <List dense={true}>
       {
