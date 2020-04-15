@@ -9,19 +9,49 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     color: #F26521 !important
 }
 
+p a {
+    color: #268bd2
+}
+
 .selected svg {
     color: #F26521 !important
 }
 
 
-.ButtonGroupNav button{
+.ButtonGroupNav button {
     padding: 0
 }
 
-.ButtonGroupNav button a{
+.ButtonGroupNav button a {
     color: inherit;
     padding: 6px 16px;
     text-decoration: none;
     display: inline-block !important;
     width: 100%;
+}
+
+.paginationPaperHover{
+    opacity: 0.8;
+    transition: opacity .2s ease-in-out;
+    padding: 0 10px 13px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    box-shadow: none !important;
+    display: flex;
+    justify-content: center
+}
+
+.paginationPaperHover:hover{
+    opacity: 1;
+    transition: opacity .4s ease-in-out;
+}
+
+@media only screen and (max-width: 600px) {
+    .paginationPaperHover{
+        opacity: 1;
+        width: 100%;
+        box-shadow: 0;
+        bottom: 70px;
+        position: relative;
+    }
 }

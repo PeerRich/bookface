@@ -5,7 +5,8 @@
   "dependencies": {
     "@daily-co/daily-js": "^0.9.94",
     "@material-ui/core": "latest",
-    "@material-ui/icons": "latest",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "^4.0.0-alpha.49",
     "clsx": "latest",
     "next": "latest",
     "nextjs-redirect": "^2.0.1",

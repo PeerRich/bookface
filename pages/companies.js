@@ -14,7 +14,7 @@ export default function Companies() {
           <Toolbar style={{background: "#222"}}>
             <ButtonGroup className="ButtonGroupNav" color="secondary">
               <Button variant="contained" color="secondary">
-                <Link href="/companies" as="/companies">Company</Link>
+                <Link href="/companies" as="/companies">Companies</Link>
               </Button>
               <Button>
                 <Link href="/founders" as="/founders">Founders</Link>

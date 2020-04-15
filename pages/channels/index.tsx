@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import Root from "../../src/components/Root";
-import {Button, Chip, Divider, ButtonGroup} from "@material-ui/core";
+import {Button, Chip, ButtonGroup, Paper} from "@material-ui/core";
 import ForumListEntry from "../../src/components/ForumListEntry";
 
 export default function Index() {
@@ -43,23 +43,21 @@ export default function Index() {
   return (
   <>
     <Root>
-      <div>
-        {channels.map(channel => (
-        <Chip key={channel} onClick={() => handleClick(channel)}
-              style={{margin: 4}} variant={channelState === channel ? "default" : "outlined"} size="small"
-              label={channel}/>
-        ))}
-        <Chip onClick={() => alert("change settings")}
-              style={{margin: 4}} variant="default" size="small"
-              label="Browse Channels" color="primary" />
+      <div style={{margin: "-24px -24px 24px -24px"}}>
+        <Paper style={{borderRadius: 0, padding: 16}}>
+          {channels.map(channel => (
+          <Chip key={channel} onClick={() => handleClick(channel)}
+                style={{margin: 4}} variant={channelState === channel ? "default" : "outlined"} size="small"
+                label={channel}/>
+          ))}
+        </Paper>
       </div>
-      <Divider style={{margin: "24px 0px"}}/>
       <ButtonGroup size="small">
         <Button variant="contained" color="primary">New Post</Button>
         <Button color="primary">
           Notification Settings
         </Button>
-        <Button  color="primary">
+        <Button color="primary">
           Guidelines
         </Button>
       </ButtonGroup>
