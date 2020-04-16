@@ -36,7 +36,7 @@ import ListItemSecondaryAction from "@material-ui/core/ListItemSecondaryAction";
 import VideoDialog from "./VideoDialog";
 import BadgeAvatars from "./BadgeAvatars";
 import BottomNav from "./BottomNav";
-import {CommunityMenu, RecruitingMenu, CompanyMenu, ContactMenu, MiscMenu, ResourcesMenu} from "./Menus";
+import Menus, {RecruitingMenu} from "./Menus";
 import Messenger from "./Messenger";
 
 const drawerWidth = 240;
@@ -455,15 +455,7 @@ export default function Root(props: any) {
 
       {/* Menu Switch for Recruiting */
         recruiting ? <RecruitingMenu/> :
-        <>
-          <CommunityMenu/>
-          <Divider/>
-          <ResourcesMenu/>
-          <Divider/>
-          <ContactMenu/>
-          <CompanyMenu/>
-          <MiscMenu/>
-        </>
+        <Menus />
       }
 
       <div className={classes.grow}/>
@@ -624,15 +616,15 @@ export default function Root(props: any) {
           [classes.messengerClose]: !openChat,
         })}>
           <Messenger buttons={
-              <ListItemSecondaryAction>
-                <IconButton href="mailto:person@example.com" size="small" edge="end" aria-label="email">
-                  <MailIcon/>
-                </IconButton>
-                <VideoDialog button={<VideoIcon/>}/>
-                <IconButton onClick={() => handleMessengerClose()} size="small" edge="end" aria-label="close">
-                  <ClearIcon/>
-                </IconButton>
-              </ListItemSecondaryAction>
+            <ListItemSecondaryAction>
+              <IconButton href="mailto:person@example.com" size="small" edge="end" aria-label="email">
+                <MailIcon/>
+              </IconButton>
+              <VideoDialog button={<VideoIcon/>}/>
+              <IconButton onClick={() => handleMessengerClose()} size="small" edge="end" aria-label="close">
+                <ClearIcon/>
+              </IconButton>
+            </ListItemSecondaryAction>
           }/>
         </Paper>}
       </>

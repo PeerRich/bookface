@@ -1,10 +1,15 @@
 import React from 'react';
 import Root from "../src/components/Root";
 import Toolbar from "@material-ui/core/Toolbar";
-import {Chip, Button, ButtonGroup, Paper, Typography} from "@material-ui/core";
 import FounderSelect from "../src/components/FounderSelect";
 import Link from "next/link";
 import DirectoryGrid from "../src/components/DirectoryGrid";
+import Typography from "@material-ui/core/Typography";
+import Paper from "@material-ui/core/Paper";
+import Button from "@material-ui/core/Button";
+import ButtonGroup from "@material-ui/core/ButtonGroup";
+import Chip from "@material-ui/core/Chip";
+
 
 const people = [
   {
