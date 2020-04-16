@@ -28,7 +28,6 @@ export default function VideoDialog(props: any) {
     </IconButton>
     <Dialog
     maxWidth="xl"
-    style={{margin: 8}}
     fullWidth
     fullScreen={fullScreen}
     open={open}
