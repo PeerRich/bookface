@@ -650,7 +650,7 @@ export default function Root(props: any) {
         recruiting ? <RecruitingMenu/> :
         <Menus/>
       }
-      <List>
+      <List style={{marginBottom: 30}}>
         <ListItem>
           <ListItemIcon style={{visibility: open ? "visible" : "hidden"}} className={classes.listItemIcon}>
             <PersonAddIcon/>

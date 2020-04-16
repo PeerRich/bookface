@@ -57,6 +57,10 @@ export default function BottomNav(props: any) {
 
   return (<>
     <BottomNavigation
+    style={{
+      backgroundColor: "rgba(255, 255, 255, 0.25)",
+      backdropFilter: "blur(25.1389px)",
+    }}
     value={value}
     onChange={(event, newValue) => {
       setValue(newValue);
