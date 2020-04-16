@@ -64,7 +64,10 @@ createStyles({
     bottom: 0,
     left: 0,
     right: 0,
-    width: "100%"
+    width: "100%",
+    [theme.breakpoints.down('sm')]: {
+      marginBottom: 70,
+    },
   }
 }),
 );
