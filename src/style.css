@@ -106,3 +106,20 @@ p a {
     from {background-position: 1814px}
     to {background-position: -1814px}
 }
+
+
+.videoCallFrameWrapper{
+    position: relative;
+    overflow: hidden;
+    padding-top: 50.25%;
+    margin: -20px -24px -12px;
+}
+
+@media only screen and (max-width: 600px) {
+    .videoCallFrameWrapper{
+        position: relative;
+        overflow: hidden;
+        padding-top: 0;
+        height: 100%;
+    }
+}

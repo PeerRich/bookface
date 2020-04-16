@@ -18,11 +18,7 @@ class VideoCallFrame extends React.Component {
   }
 
   render() {
-    return <div style={{
-      position: "relative",
-      overflow: "hidden",
-      paddingTop: "50.25%",
-    }}>
+    return <div className="videoCallFrameWrapper">
       <iframe style={{
         position: "absolute",
         top: 0,

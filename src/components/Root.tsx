@@ -39,6 +39,7 @@ import BottomNav from "./BottomNav";
 import Menus, {RecruitingMenu} from "./Menus";
 import Messenger from "./Messenger";
 import {Hidden} from "@material-ui/core";
+import {useRouter} from "next/router";
 
 const drawerWidth = 240;
 
@@ -241,6 +242,7 @@ export default function Root(props: any) {
   const [openChat, setOpenChat] = React.useState(false);
   const [openMessenger, setOpenMessenger] = React.useState(true);
   const [recruiting, setRecruting] = React.useState(false);
+  const router = useRouter();
 
 
   const toggleRecruiting = () => {
@@ -325,37 +327,11 @@ export default function Root(props: any) {
   open={isMobileMenuOpen}
   onClose={handleMobileMenuClose}
   >
-    <MenuItem>
-      <IconButton aria-label="show 4 new mails" color="inherit">
-        <Badge badgeContent={4} color="secondary">
-          <MailIcon/>
-        </Badge>
-      </IconButton>
-      <p>Messages</p>
-    </MenuItem>
-    <MenuItem>
-      <IconButton aria-label="show 11 new notifications" color="inherit">
-        <Badge badgeContent={11} color="secondary">
-          <NotificationsIcon/>
-        </Badge>
-      </IconButton>
-      <p>Notifications</p>
-    </MenuItem>
-    <MenuItem onClick={handleProfileMenuOpen}>
-      <IconButton
-      aria-label="account of current user"
-      aria-controls="primary-search-account-menu"
-      aria-haspopup="true"
-      color="inherit"
-      >
-        <BadgeAvatars>
-          <Avatar className={classes.small}
-                  src="https://bookface-images.s3.amazonaws.com/avatars/3125c4d8e5df501ff224bf5f00cb9dc2778df159.jpg"
-                  alt="Peer Rich"/>
-        </BadgeAvatars>
-      </IconButton>
-      <p>Profile</p>
-    </MenuItem>
+
+    <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
+    <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+    <MenuItem onClick={handleMenuClose}>Settings</MenuItem>
+    <MenuItem onClick={() => router.push("/")}>Logout</MenuItem>
   </Menu>
   );
 
