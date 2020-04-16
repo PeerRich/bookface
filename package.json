@@ -1,5 +1,5 @@
 {
-  "name": "nextjs-with-typescript",
+  "name": "bookface-redesign",
   "version": "4.0.0",
   "private": true,
   "dependencies": {
@@ -9,7 +9,6 @@
     "@material-ui/lab": "^4.0.0-alpha.49",
     "clsx": "latest",
     "next": "latest",
-    "nextjs-redirect": "^2.0.1",
     "react": "latest",
     "react-dom": "latest"
   },

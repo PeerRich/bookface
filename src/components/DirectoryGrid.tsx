@@ -1,5 +1,5 @@
 import React from 'react';
-import {makeStyles, createStyles} from '@material-ui/core/styles';
+import {createStyles, makeStyles} from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Avatar from "@material-ui/core/Avatar";
 import IconButton from "@material-ui/core/IconButton";
@@ -9,7 +9,9 @@ import CardMedia from '@material-ui/core/CardMedia';
 import CardActions from '@material-ui/core/CardActions';
 import CallIcon from '@material-ui/icons/Call';
 import InboxIcon from '@material-ui/icons/Email';
-import {CardContent, Tooltip, Typography} from "@material-ui/core";
+import CardContent from "@material-ui/core/CardContent";
+import Tooltip from "@material-ui/core/Tooltip";
+import Typography from "@material-ui/core/Typography";
 import PaginationButtons from "./PaginationButtons";
 
 const useStyles = makeStyles(() =>

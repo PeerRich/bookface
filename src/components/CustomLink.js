@@ -12,5 +12,5 @@ export default ({ href, children, passHref }) => {
     className = `${className} selected`
   }
 
-  return <Link style={{paddingLeft: 24}} href={href} passHref>{React.cloneElement(children, { className })}</Link>
+  return <Link href={href} passHref>{React.cloneElement(children, { className })}</Link>
 }
