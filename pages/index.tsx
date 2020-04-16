@@ -11,6 +11,7 @@ import Typography from '@material-ui/core/Typography';
 import {makeStyles} from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Paper from "@material-ui/core/Paper";
+import Router from "next/router";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -18,7 +19,8 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    padding: 16
+    padding: 16,
+
   },
   avatar: {
     margin: theme.spacing(1),
@@ -39,7 +41,7 @@ export default function SignIn() {
   return (
   <Container component="main" maxWidth="xs">
     <CssBaseline/>
-    <Paper className="backgroundLogos">
+    <Paper className="backgroundLogos"  style={{backgroundColor: "#f6f6ef"}}>
       <div className="backgroundLeft">
       </div>
       <div className="backgroundRight">
@@ -80,13 +82,13 @@ export default function SignIn() {
         label="Remember me"
         />
         <Button
-        type="submit"
+        onClick={() => Router.push("/channels")}
         fullWidth
         variant="contained"
         color="primary"
         className={classes.submit}
         >
-          <Link style={{color: "#fff", textDecoration: "none"}} href="/channels">Sign In</Link>
+          Sign In
         </Button>
         <Grid container>
           <Grid item xs>
