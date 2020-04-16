@@ -8,7 +8,7 @@ export default function Index() {
   <>
     <Root>
       <Typography variant="h4" component="h1" gutterBottom>
-        Investor Grades
+        Candidates
       </Typography>
       Work in Progress. Nothing to see here, yet. <br/>
       <Link href="/channels" color="secondary">

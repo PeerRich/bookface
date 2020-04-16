@@ -242,9 +242,11 @@ export default function Root(props: any) {
   const [openMessenger, setOpenMessenger] = React.useState(true);
   const [recruiting, setRecruting] = React.useState(false);
 
+
   const toggleRecruiting = () => {
     setRecruting((prev) => !prev);
   };
+
 
   const mobile = useMediaQuery(theme.breakpoints.down('xs'));
 

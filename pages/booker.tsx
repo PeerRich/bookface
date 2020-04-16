@@ -1,21 +1,19 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
 import Link from '../src/Link';
 import Root from "../src/components/Root";
 
-export default function About() {
+export default function Booker() {
   return (
   <>
     <Root>
-      <Box my={4}>
-        <Typography variant="h4" component="h1" gutterBottom>
-          about
-        </Typography>
-        <Link href="/index" color="secondary">
-          Go to the index page
-        </Link>
-      </Box>
+      <Typography variant="h4" component="h1" gutterBottom>
+        Booker
+      </Typography>
+      Work in Progress. Nothing to see here, yet. <br/>
+      <Link href="/channels" color="secondary">
+        Go to back to the forum page
+      </Link>
     </Root>
   </>
   );

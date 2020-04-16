@@ -109,6 +109,35 @@ export default function Menus() {
       <Divider/>
       <NestedList icon={
         <ListItemIcon style={{paddingLeft: 8}}>
+          <WorkIcon/>
+        </ListItemIcon>} title="Company">
+        <CustomLink href="/company" passHref>
+          <ListItem component="a" button>
+            <ListItemIcon style={{paddingLeft: 8}}>
+              <ApartmentIcon/>
+            </ListItemIcon>
+            <ListItemText primary="Mage"/>
+          </ListItem>
+        </CustomLink>
+        <CustomLink href="/company/investments" passHref>
+          <ListItem component="a" button>
+            <ListItemIcon style={{paddingLeft: 8}}>
+              <DollarIcon/>
+            </ListItemIcon>
+            <ListItemText primary="Investments"/>
+          </ListItem>
+        </CustomLink>
+        <CustomLink href="/company/investor-likes" passHref>
+          <ListItem component="a" button>
+            <ListItemIcon style={{paddingLeft: 8}}>
+              <ThumbUpIcon/>
+            </ListItemIcon>
+            <ListItemText primary="Investor Likes"/>
+          </ListItem>
+        </CustomLink>
+      </NestedList>
+      <NestedList icon={
+        <ListItemIcon style={{paddingLeft: 8}}>
           <InfoIcon/>
         </ListItemIcon>} title="Miscellaneous">
         <ListItem component="a" button
@@ -137,45 +166,6 @@ export default function Menus() {
           <ListItemText primary="Privacy Policy"/>
         </ListItem>
       </NestedList>
-      <NestedList icon={
-        <ListItemIcon style={{paddingLeft: 8}}>
-          <WorkIcon/>
-        </ListItemIcon>} title="Company">
-        <CustomLink href="/company" passHref>
-          <ListItem component="a" button>
-            <ListItemIcon style={{paddingLeft: 8}}>
-              <ApartmentIcon/>
-            </ListItemIcon>
-            <ListItemText primary="Mage"/>
-          </ListItem>
-        </CustomLink>
-        <CustomLink href="/booker" passHref>
-          <ListItem component="a" button>
-            <ListItemIcon style={{paddingLeft: 8}}>
-              <DollarIcon/>
-            </ListItemIcon>
-            <ListItemText primary="Investments"/>
-          </ListItem>
-        </CustomLink>
-        <CustomLink href="/booker" passHref>
-          <ListItem component="a" button>
-            <ListItemIcon style={{paddingLeft: 8}}>
-              <ThumbUpIcon/>
-            </ListItemIcon>
-            <ListItemText primary="Investor Likes"/>
-          </ListItem>
-        </CustomLink>
-      </NestedList>
-      <List>
-        <CustomLink href="/channels" passHref>
-          <ListItem component="a" button>
-            <ListItemIcon style={{paddingLeft: 8}}>
-              <ForumIcon/>
-            </ListItemIcon>
-            <ListItemText primary="Forum"/>
-          </ListItem>
-        </CustomLink>
-      </List>
       <Divider/>
     </>
   );
@@ -185,7 +175,7 @@ export function RecruitingMenu() {
   return (
     <>
       <List>
-        <CustomLink href="/deals" passHref>
+        <CustomLink href="/workatastartup/applicants" passHref>
           <ListItem component="a" button>
             <ListItemIcon style={{paddingLeft: 8}}>
               <StarIcon/>
@@ -193,7 +183,7 @@ export function RecruitingMenu() {
             <ListItemText primary="Candidates"/>
           </ListItem>
         </CustomLink>
-        <CustomLink href="/inbox" passHref>
+        <CustomLink href="/workatastartup/applicants/inbox" passHref>
           <ListItem component="a" button>
             <ListItemIcon style={{paddingLeft: 8}}>
               <InboxIcon/>
@@ -201,7 +191,7 @@ export function RecruitingMenu() {
             <ListItemText primary="Inbox"/>
           </ListItem>
         </CustomLink>
-        <CustomLink href="/knowledge" passHref>
+        <CustomLink href="/company/jobs" passHref>
           <ListItem component="a" button>
             <ListItemIcon style={{paddingLeft: 8}}>
               <PersonAddIcon/>
@@ -209,7 +199,7 @@ export function RecruitingMenu() {
             <ListItemText primary="Jobs"/>
           </ListItem>
         </CustomLink>
-        <CustomLink href="/knowledge" passHref>
+        <CustomLink href="/team" passHref>
           <ListItem component="a" button>
             <ListItemIcon style={{paddingLeft: 8}}>
               <ApartmentIcon/>
@@ -220,7 +210,7 @@ export function RecruitingMenu() {
       </List>
       <Divider/>
       <List>
-        <CustomLink href="/knowledge" passHref>
+        <CustomLink href="https://bookface.ycombinator.com/workatastartup/guide/recruiting-hiring-handbook" passHref>
           <ListItem component="a" button>
             <ListItemIcon style={{paddingLeft: 8}}>
               <MenuBookIcon/>

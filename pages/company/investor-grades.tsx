@@ -3,7 +3,7 @@ import Typography from '@material-ui/core/Typography';
 import Link from '../../src/Link';
 import Root from "../../src/components/Root";
 
-export default function Index() {
+export default function InvestorLikes() {
   return (
   <>
     <Root>
