@@ -17,21 +17,11 @@ const useStyles = makeStyles({
 });
 
 
-export default function BottomDrawerMenu(props: any) {
+export default function BottomDrawerMenu(props) {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
 
-  const toggleDrawer = (open: boolean) => (
-  event: React.KeyboardEvent | React.MouseEvent,
-  ) => {
-    if (
-    event.type === 'keydown' &&
-    ((event as React.KeyboardEvent).key === 'Tab' ||
-    (event as React.KeyboardEvent).key === 'Shift')
-    ) {
-      return;
-    }
-
+  const toggleDrawer = (open) => () => {
     setOpen(open);
   };
 
@@ -54,4 +44,4 @@ export default function BottomDrawerMenu(props: any) {
     </Drawer>
   </>
   );
-};
+}
