@@ -38,6 +38,7 @@ import BadgeAvatars from "./BadgeAvatars";
 import BottomNav from "./BottomNav";
 import Menus, {RecruitingMenu} from "./Menus";
 import Messenger from "./Messenger";
+import {Hidden} from "@material-ui/core";
 
 const drawerWidth = 240;
 
@@ -60,6 +61,10 @@ createStyles({
   appBarShift: {
     marginLeft: drawerWidth,
     width: `calc(100% - ${drawerWidth}px)`,
+    [theme.breakpoints.down('sm')]: {
+      marginLeft: 0,
+      width: "100%",
+    },
     transition: theme.transitions.create(['width', 'margin'], {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.enteringScreen,
@@ -125,6 +130,12 @@ createStyles({
   },
   drawerOpen: {
     width: drawerWidth,
+    [theme.breakpoints.down('sm')]: {
+      width: theme.spacing(7) + 1,
+      [theme.breakpoints.up('sm')]: {
+        width: theme.spacing(9) + 1,
+      },
+    },
     transition: theme.transitions.create('width', {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.enteringScreen,
@@ -455,14 +466,14 @@ export default function Root(props: any) {
 
       {/* Menu Switch for Recruiting */
         recruiting ? <RecruitingMenu/> :
-        <Menus />
+        <Menus/>
       }
 
       <div className={classes.grow}/>
       <List>
         <ListItem>
           <ListItemIcon style={{visibility: open ? "visible" : "hidden"}} className={classes.listItemIcon}>
-            <PersonAddIcon/>
+            <Hidden smDown><PersonAddIcon/></Hidden>
           </ListItemIcon>
           <ListItemText style={{visibility: open ? "visible" : "hidden"}} primary="Recruiting"/>
           <ListItemSecondaryAction style={{right: 8}}>
@@ -611,7 +622,8 @@ export default function Root(props: any) {
           </IconButton>}
         </div>
 
-        {openMessenger && <Paper style={{zIndex: 2, bottom: 0, right: openChat ? 310 : 88}} className={clsx(classes.messenger, {
+        {openMessenger &&
+        <Paper style={{zIndex: 2, bottom: 0, right: openChat ? 310 : 88}} className={clsx(classes.messenger, {
           [classes.messengerOpen]: openChat,
           [classes.messengerClose]: !openChat,
         })}>

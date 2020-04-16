@@ -76,7 +76,6 @@ export default function Founders() {
           data={people}/>
         </div>
       </div>
-
     </Root>
   </>
   );

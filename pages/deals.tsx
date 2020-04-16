@@ -25,7 +25,7 @@ const deals = [
 ];
 
 export default function Deals() {
-  const [category, setCategory] = useState("All Posts");
+  const [category, setCategory] = useState("High Value");
 
   const handleClick = (category: string) => {
     setCategory(category);
