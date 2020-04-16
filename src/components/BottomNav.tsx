@@ -35,14 +35,17 @@ export default function BottomNav(props: any) {
 
   let initVal = 0;
 
-  switch (router.pathname) {
-    case '/channels':
+  function containsUrl(term: string) {
+    return router.pathname.includes(term);
+  }
+  switch (true) {
+    case containsUrl("/channels"):
       initVal = 0;
       break;
-    case '/messages':
+    case containsUrl("/messages"):
       initVal = 1;
       break;
-    case '/account':
+    case containsUrl("/account"):
       initVal = 2;
       break;
     default:

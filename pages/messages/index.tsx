@@ -2,14 +2,15 @@ import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import ListItem from "@material-ui/core/ListItem";
 import ListItemAvatar from "@material-ui/core/ListItemAvatar/ListItemAvatar";
-import BadgeAvatars from "../src/components/BadgeAvatars";
+import BadgeAvatars from "../../src/components/BadgeAvatars";
 import Avatar from "@material-ui/core/Avatar";
 import ListItemText from "@material-ui/core/ListItemText/ListItemText";
 import Divider from "@material-ui/core/Divider";
 import List from "@material-ui/core/List";
-import Root from "../src/components/Root";
+import Root from "../../src/components/Root";
+import Router from "next/router";
 
-export default function Messages() {
+export default function Index() {
   return (
   <Root>
     <div style={{
@@ -17,7 +18,7 @@ export default function Messages() {
       whiteSpace: 'nowrap',
       margin: "-32px -24px",
     }}>
-      <List>
+      <List onClick={() => Router.push("/messages/chat")}>
         <ListItem alignItems="flex-start" button onClick={() => console.log()}>
           <ListItemAvatar>
             <BadgeAvatars status="online">

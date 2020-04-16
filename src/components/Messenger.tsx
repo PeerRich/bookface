@@ -96,7 +96,7 @@ export default function Messenger(props: any) {
       </small>
       <div className={classes.bubbleWrapper}>
         <span className={classes.bubble} style={{borderBottomLeftRadius: 0}}>
-        Wow this is dope 🎉
+        Yo this is dope 🎉
         </span>
       </div>
       <div className={classes.bubbleWrapper}>
