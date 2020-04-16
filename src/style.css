@@ -63,3 +63,45 @@ p a {
         position: relative;
     }
 }
+
+
+.backgroundLogos{
+    position: fixed;
+    z-index: -99;
+    height: 100%;
+    width: 1814px;
+    margin: 0 auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.2;
+}
+
+.backgroundLogos .backgroundLeft{
+    background-image: url("../public/portfolio-left.jpg");
+    width: 100%;
+    height:450px;
+    background-size: contain;
+    animation: moveLeft 100s linear infinite;
+}
+
+
+.backgroundLogos .backgroundRight{
+    background-image: url("../public/portfolio-right.jpg");
+    background-size: contain;
+    width: 100%;
+    height:450px;
+    animation: moveRight 100s linear infinite;
+}
+
+@keyframes moveLeft {
+    from {background-position: -1814px;}
+    to {background-position: 1814px}
+}
+
+
+@keyframes moveRight{
+    from {background-position: 1814px}
+    to {background-position: -1814px}
+}
