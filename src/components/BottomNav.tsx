@@ -2,7 +2,6 @@ import React from 'react';
 import {makeStyles} from '@material-ui/core/styles';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
-import PersonIcon from '@material-ui/icons/Person';
 import InboxIcon from '@material-ui/icons/Email';
 import ForumIcon from "@material-ui/icons/Forum";
 import Router, {useRouter} from "next/router";
@@ -19,7 +18,7 @@ const useStyles = makeStyles({
   }
 });
 
-export default function BottomNav() {
+export default function BottomNav(props: any) {
   const classes = useStyles();
   const router = useRouter();
 
@@ -54,7 +53,7 @@ export default function BottomNav() {
   >
     <BottomNavigationAction className={classes.tab} onClick={() => Router.push("/channels")} label="Forum" icon={<ForumIcon/>}/>
     <BottomNavigationAction className={classes.tab} onClick={() => Router.push("/messages")} label="Messages" icon={<InboxIcon/>}/>
-    <BottomNavigationAction className={classes.tab} onClick={() => Router.push("/account")} label="Account" icon={<PersonIcon/>}/>
+    {props.menu}
   </BottomNavigation>
   );
 }
