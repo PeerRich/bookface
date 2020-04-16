@@ -12,6 +12,8 @@ import {makeStyles} from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Paper from "@material-ui/core/Paper";
 import Router from "next/router";
+import {Hidden} from "@material-ui/core";
+import AddToHomeScreenDialog from "../src/components/AddToHomeScreenDialog";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -40,6 +42,9 @@ export default function SignIn() {
 
   return (
   <Container component="main" maxWidth="xs">
+    <Hidden smUp>
+      <AddToHomeScreenDialog/>
+    </Hidden>
     <CssBaseline/>
     <Paper className="backgroundLogos"  style={{backgroundColor: "#f6f6ef"}}>
       <div className="backgroundLeft">

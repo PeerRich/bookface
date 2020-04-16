@@ -1,8 +1,7 @@
 import React, {useState} from 'react';
 import Root from "../../src/components/Root";
-import {Button, Chip, ButtonGroup, Paper, Hidden} from "@material-ui/core";
+import {Button, ButtonGroup, Chip, Paper} from "@material-ui/core";
 import ForumListEntry from "../../src/components/ForumListEntry";
-import AddToHomeScreenDialog from "../../src/components/AddToHomeScreenDialog";
 
 export default function Index() {
   const [channelState, setChannel] = useState("All Posts");
@@ -44,9 +43,6 @@ export default function Index() {
   return (
   <>
     <Root>
-      <Hidden smUp>
-        <AddToHomeScreenDialog/>
-      </Hidden>
       <div style={{margin: "-24px -24px 24px -24px"}}>
         <Paper style={{borderRadius: 0, padding: 16}}>
           {channels.map(channel => (
