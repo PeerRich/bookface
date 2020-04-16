@@ -39,7 +39,6 @@ import BottomNav from "./BottomNav";
 import Menus, {RecruitingMenu} from "./Menus";
 import Messenger from "./Messenger";
 import {Hidden} from "@material-ui/core";
-import BottomDrawerMenu from "./BottomDrawerMenu";
 
 const drawerWidth = 240;
 
@@ -646,16 +645,15 @@ export default function Root(props: any) {
 
     </Drawer>}
 
-    {mobile && <BottomNav menu={<>
-      <BottomDrawerMenu>
-        {/* Menu Switch for Recruiting */
-          recruiting ? <RecruitingMenu/> :
-          <Menus/>
-        }
-        <List>
+    {mobile && <BottomNav>
+      {/* Menu Switch for Recruiting */
+        recruiting ? <RecruitingMenu/> :
+        <Menus/>
+      }
+      <List>
         <ListItem>
           <ListItemIcon style={{visibility: open ? "visible" : "hidden"}} className={classes.listItemIcon}>
-            <Hidden smDown><PersonAddIcon/></Hidden>
+            <PersonAddIcon/>
           </ListItemIcon>
           <ListItemText style={{visibility: open ? "visible" : "hidden"}} primary="Recruiting"/>
           <ListItemSecondaryAction style={{right: 8}}>
@@ -663,8 +661,7 @@ export default function Root(props: any) {
           </ListItemSecondaryAction>
         </ListItem>
       </List>
-      </BottomDrawerMenu>
-    </>}/>}
+    </BottomNav>}
 
   </div>
   );

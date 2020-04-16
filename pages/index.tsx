@@ -21,9 +21,11 @@ export default function Index() {
 
   return (
   <div className={classes.root}>
-    <Paper elevation={0} />
+    <div className="backgroundLeft">
+    </div>
+    <div className="backgroundRight">
+    </div>
     <Paper />
-    <Paper elevation={3} />
   </div>
   );
 }
