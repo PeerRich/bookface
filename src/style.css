@@ -119,7 +119,6 @@ p a {
     .videoCallFrameWrapper{
         position: relative;
         overflow: hidden;
-        padding-top: 0;
-        height: 100%;
+        padding-top: 210%;
     }
 }
