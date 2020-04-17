@@ -397,8 +397,8 @@ export default function Root(props: any) {
           <div className={classes.searchIcon}>
             <SearchIcon/>
           </div>
-          <form onSubmit={() => router.push("/search")}>
-            <InputBase
+          <InputBase
+          onClick={{() => router.push("/search")}}
           placeholder="Search…"
           classes={{
             root: classes.inputRoot,
@@ -406,7 +406,6 @@ export default function Root(props: any) {
           }}
           inputProps={{'aria-label': 'search'}}
           />
-          </form>
         </div>
         <div className={classes.sectionMobile}>
           <IconButton

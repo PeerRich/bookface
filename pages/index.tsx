@@ -68,7 +68,7 @@ export default function SignIn() {
         name="email"
         autoComplete="email"
         autoFocus
-        value="demo"
+        value="demo@example.com"
         />
         <TextField
         variant="outlined"
