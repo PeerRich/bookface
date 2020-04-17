@@ -8,53 +8,6 @@ import DirectoryGrid from "../src/components/DirectoryGrid";
 import ScrollTabs from "../src/components/ScrollTabs";
 
 
-const companies = [
-  {
-    id: 1,
-    company: "Mage",
-    companyLogo: "https://magemarket.com/static/logo.svg",
-    batch: "(W19)",
-    group: "Group 3",
-    email: "founders@magemarket.com",
-    groupPartners: "Jack Sparrow, Leia Organa, The Queen",
-    description: "The safest way to buy and sell collectibles starting with Magic: The Gathering",
-    website: "magemarket.com",
-  },
-  {
-    id: 1,
-    company: "Mage",
-    companyLogo: "https://magemarket.com/static/logo.svg",
-    batch: "(W19)",
-    group: "Group 3",
-    email: "founders@magemarket.com",
-    groupPartners: "Jack Sparrow, Leia Organa, The Queen",
-    description: "The safest way to buy and sell collectibles starting with Magic: The Gathering",
-    website: "magemarket.com",
-  },
-  {
-    id: 1,
-    company: "Mage",
-    companyLogo: "https://magemarket.com/static/logo.svg",
-    batch: "(W19)",
-    group: "Group 3",
-    email: "founders@magemarket.com",
-    groupPartners: "Jack Sparrow, Leia Organa, The Queen",
-    description: "The safest way to buy and sell collectibles starting with Magic: The Gathering",
-    website: "magemarket.com",
-  },
-  {
-    id: 1,
-    company: "Mage",
-    companyLogo: "https://magemarket.com/static/logo.svg",
-    batch: "(W19)",
-    group: "Group 3",
-    email: "founders@magemarket.com",
-    groupPartners: "Jack Sparrow, Leia Organa, The Queen",
-    description: "The safest way to buy and sell collectibles starting with Magic: The Gathering",
-    website: "magemarket.com",
-  },
-];
-
 
 export default function Companies() {
   return (
@@ -83,17 +36,6 @@ export default function Companies() {
               </Button>
             </ButtonGroup>
           </Toolbar>*/}
-
-          <div style={{padding: 24}}>
-            <div style={{paddingBottom: 16}}>
-              <Typography variant="subtitle1">Showing 203 results</Typography>
-              <Typography variant="caption"><Chip label="Confidential" size="small"/> Do not distribute outside of YC
-                under any circumstance.</Typography>
-            </div>
-            <DirectoryGrid
-              variant="company"
-              data={companies}/>
-          </div>
         </div>
       </Root>
     </>
