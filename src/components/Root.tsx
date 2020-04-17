@@ -398,7 +398,7 @@ export default function Root(props: any) {
             <SearchIcon/>
           </div>
           <InputBase
-          onClick={{() => router.push("/search")}}
+          onClick={() => router.push("/search")}
           placeholder="Search…"
           classes={{
             root: classes.inputRoot,
