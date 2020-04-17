@@ -341,11 +341,10 @@ export default function SearchResults() {
       </div>
     </TabPanel>
     <TabPanel value={value} index={6}>
-      <div style={{margin: "48px 24px"}}>
-        <div style={{paddingBottom: 20}}>
-          <SearchResultsNumber/>
+      <div className={classes.tabPanel}>
+        <div style={{paddingBottom: 20, margin: "-30px -24px"}}>
+          <MessageList/>
         </div>
-        <MessageList/>
       </div>
     </TabPanel>
   </div>
