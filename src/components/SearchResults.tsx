@@ -9,13 +9,14 @@ import DirectoryGrid from "./DirectoryGrid";
 import InvestorGrid from "./InvestorGrid";
 import ForumListEntry from "./ForumListEntry";
 import {Chip, Paper} from "@material-ui/core";
+import DealListEntry from "./DealListEntry";
+import {MessageList} from "../../pages/messages";
 
 interface TabPanelProps {
   children?: React.ReactNode;
   index: any;
   value: any;
 }
-
 
 const channels = [
   "All Posts",
@@ -223,7 +224,7 @@ const useStyles = makeStyles(() => ({
   }
 }));
 
-export default function ScrollTabs() {
+export default function SearchResults() {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
   const [channelState, setChannel] = useState("All Posts");
@@ -251,22 +252,16 @@ export default function ScrollTabs() {
       variant="scrollable"
       scrollButtons="auto"
       >
-        <Tab className={classes.tab} label="All" {...a11yProps(0)} />
-        <Tab className={classes.tab} label="Forum" {...a11yProps(1)} />
-        <Tab className={classes.tab} label="Founders" {...a11yProps(2)} />
-        <Tab className={classes.tab} label="Companies" {...a11yProps(3)} />
-        <Tab className={classes.tab} label="Investors" {...a11yProps(4)} />
-        <Tab className={classes.tab} label="Deals" {...a11yProps(5)} />
-        <Tab className={classes.tab} label="Knowledge" {...a11yProps(6)} />
-        <Tab className={classes.tab} label="Messages" {...a11yProps(7)} />
+        <Tab className={classes.tab} label="Forum" {...a11yProps(0)} />
+        <Tab className={classes.tab} label="Founders" {...a11yProps(1)} />
+        <Tab className={classes.tab} label="Companies" {...a11yProps(2)} />
+        <Tab className={classes.tab} label="Investors" {...a11yProps(3)} />
+        <Tab className={classes.tab} label="Deals" {...a11yProps(4)} />
+        <Tab className={classes.tab} label="Knowledge Base" {...a11yProps(5)} />
+        <Tab className={classes.tab} label="Messages" {...a11yProps(6)} />
       </Tabs>
     </AppBar>
     <TabPanel value={value} index={0}>
-      <div className={classes.tabPanel}>
-        Item One
-      </div>
-    </TabPanel>
-    <TabPanel value={value} index={1}>
       <div className={classes.tabPanel}>
         <div style={{margin: "-24px -24px 24px -24px"}}>
           <Paper style={{borderRadius: 0, padding: 16}}>
@@ -280,32 +275,38 @@ export default function ScrollTabs() {
         <ForumListEntry/>
       </div>
     </TabPanel>
-    <TabPanel value={value} index={2}>
+    <TabPanel value={value} index={1}>
       <div className={classes.tabPanel}>
         <DirectoryGrid
         data={people}/>
       </div>
     </TabPanel>
-    <TabPanel value={value} index={3}>
+    <TabPanel value={value} index={2}>
       <div className={classes.tabPanel}>
         <DirectoryGrid
         variant="company"
         data={companies}/>
       </div>
     </TabPanel>
-    <TabPanel value={value} index={4}>
+    <TabPanel value={value} index={3}>
       <div className={classes.tabPanel}>
         <InvestorGrid data={investors}/>
       </div>
     </TabPanel>
+    <TabPanel value={value} index={4}>
+      <div className={classes.tabPanel}>
+        <DealListEntry/>
+      </div>
+    </TabPanel>
     <TabPanel value={value} index={5}>
-      Item Six
+      <div className={classes.tabPanel}>
+        Search results of Knowledge Base
+      </div>
     </TabPanel>
     <TabPanel value={value} index={6}>
-      Item Seven
-    </TabPanel>
-    <TabPanel value={value} index={7}>
-      Item Seven
+      <div style={{margin: "48px 24px"}}>
+        <MessageList/>
+      </div>
     </TabPanel>
   </div>
   );
