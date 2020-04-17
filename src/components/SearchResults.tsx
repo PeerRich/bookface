@@ -221,8 +221,15 @@ const useStyles = makeStyles(() => ({
   },
   tabPanel: {
     marginTop: 50
-  }
+  },
+  chip: {
+    margin: 4
+  },
 }));
+
+function SearchResultsNumber() {
+  return <p><small>Results 1–10 of 11666 (0.009 seconds)  ·  Sort by: <a href="#">Popularity</a> ·  Since: <a href="#">Forever</a></small></p>;
+}
 
 export default function SearchResults() {
   const classes = useStyles();
@@ -272,17 +279,41 @@ export default function SearchResults() {
             ))}
           </Paper>
         </div>
+        <div style={{paddingBottom: 20}}>
+          <SearchResultsNumber/>
+          <div>
+            <small>
+              Trending:
+              <Chip className={classes.chip} size="small" label="ppp"/>
+              <Chip className={classes.chip} size="small" label="radius"/>
+              <Chip className={classes.chip} size="small" label="pro rata"/>
+              <Chip className={classes.chip} size="small" label="radius bank"/>
+              <Chip className={classes.chip} size="small" label="nfx"/>
+              <Chip className={classes.chip} size="small" label="launch bookface"/>
+              <Chip className={classes.chip} size="small" label="covid"/>
+              <Chip className={classes.chip} size="small" label="notion" />
+              <Chip className={classes.chip} size="small" label="siempre"/>
+              <Chip className={classes.chip} size="small" label="hiring" />
+            </small>
+          </div>
+        </div>
         <ForumListEntry/>
       </div>
     </TabPanel>
     <TabPanel value={value} index={1}>
       <div className={classes.tabPanel}>
+        <div style={{paddingBottom: 20}}>
+          <SearchResultsNumber/>
+        </div>
         <DirectoryGrid
         data={people}/>
       </div>
     </TabPanel>
     <TabPanel value={value} index={2}>
       <div className={classes.tabPanel}>
+        <div style={{paddingBottom: 20}}>
+          <SearchResultsNumber/>
+        </div>
         <DirectoryGrid
         variant="company"
         data={companies}/>
@@ -290,11 +321,17 @@ export default function SearchResults() {
     </TabPanel>
     <TabPanel value={value} index={3}>
       <div className={classes.tabPanel}>
+        <div style={{paddingBottom: 20}}>
+          <SearchResultsNumber/>
+        </div>
         <InvestorGrid data={investors}/>
       </div>
     </TabPanel>
     <TabPanel value={value} index={4}>
       <div className={classes.tabPanel}>
+        <div style={{paddingBottom: 20}}>
+          <SearchResultsNumber/>
+        </div>
         <DealListEntry/>
       </div>
     </TabPanel>
@@ -305,6 +342,9 @@ export default function SearchResults() {
     </TabPanel>
     <TabPanel value={value} index={6}>
       <div style={{margin: "48px 24px"}}>
+        <div style={{paddingBottom: 20}}>
+          <SearchResultsNumber/>
+        </div>
         <MessageList/>
       </div>
     </TabPanel>

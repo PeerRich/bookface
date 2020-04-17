@@ -469,7 +469,7 @@ export default function Root(props: any) {
       {props.children}
     </main>
 
-    {!props.noChat && !mobile && <Drawer
+    {!mobile && <Drawer
       variant="permanent"
       anchor="right"
       className={clsx(classes.drawer, {

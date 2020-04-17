@@ -5,7 +5,7 @@ import SearchResults from "../src/components/SearchResults";
 export default function Companies() {
   return (
     <>
-      <Root noChat>
+      <Root>
         <SearchResults/>
       </Root>
     </>
