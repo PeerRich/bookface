@@ -65,7 +65,7 @@ createStyles({
     left: 0,
     right: 0,
     width: "100%",
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('xs')]: {
       marginBottom: 70,
     },
   }
