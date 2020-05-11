@@ -14,6 +14,8 @@ const useStyles = makeStyles({
     position: "fixed",
     bottom: 0,
     height: 70,
+    backgroundColor: "rgba(255, 255, 255, 0.6)",
+    backdropFilter: "blur(10px)",
   },
   tab: {
     paddingBottom: 20
